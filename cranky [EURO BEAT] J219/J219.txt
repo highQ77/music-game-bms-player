@@ -1,0 +1,35 @@
+Readme.txt for J219
+
+***********************************************************
+BMS data infomation
+-----------------------------------------------------------
+[DATE]          : 04/15/2000
+[MUSIC TITLE]   : J219
+[MUSIC GENRE]   : EUROBEAT
+[MUSIC COMPOSE] : cranky
+[BGA ANIMATION] : Xerenet
+                : Abe
+[PLAY LEVEL]    : ★★★★★★★
+[WAVE Style]    : PCM 22,050kHz 8bit Stereo (Almost all)
+[WAVE FILES]    : 165 Files - 9,142,233 bytes
+-----------------------------------------------------------
+[ATTENTION]
+このデータはBM98#r4.2で動作確認しています。
+
+[COMMENT] 
+この曲は友人のぱんけーきの誕生日プレゼント用に作った曲です。
+誕生日は2月21日だったんですが、大幅に遅れてしまいました。
+ゴメン＞ぱんけーき
+
+曲的にはありがちな感じのユーロです。
+歌の無いユーロってどうしてもゲームミュージックに
+聞こえてしまいますね。
+
+BGAを作成していただいたXerenetさん、Abeさん、本当に
+有り難うございました＆お疲れ様でした。
+***********************************************************
+
+　　cranky
+mail:cranky@dec.sakura.ne.jp  or  cranky@msh.biglobe.ne.jp
+HP:http://gallery.to/cranky
+ICQ:20443823

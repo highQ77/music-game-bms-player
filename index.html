@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <link rel="icon" href="/favicon.ico">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pure BMS Player</title>
+    <!-- <link rel="stylesheet" href="/css/main.css"> -->
+    <script type="module" src="./js/BMSMain.js"></script>
+    <style>
+        body {
+            background-color: #222;
+            background-image: url(./img/bg.jpg);
+            background-size: 100% 100%;
+            margin: 0;
+        }
+
+        #app {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: rgba(0, 0, 0, .5);
+            transform: perspective(400px) rotateX(50deg) scale(.52);
+            width: 100vw;
+            height: 100vh;
+            box-shadow: inset 0 0 100px black, 0 0 100px black;
+            border-bottom: 10px solid black;
+        }
+
+        .intro {
+            width: 100%;
+            font-family: 'system-ui';
+            font-weight: 100;
+            color: #FFF;
+            position: fixed;
+            top: 20px;
+        }
+
+        .intro2 {
+            width: 100%;
+            font-family: 'system-ui';
+            font-weight: 100;
+            color: #FFF;
+            position: fixed;
+            bottom: 20px;
+        }
+
+        hr {
+            border: none;
+            border-top: .1px solid #333;
+            width: 100%;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="intro">
+        <hr>
+        <div style="margin-left: 24px;">
+            <div style="font-size: 60px;">BMS Player</div>
+            <div style="font-size: 15px; margin-top: 8px;">power by pure html / js / css</div>
+            <div style="font-size: 12px; margin-top: 8px;">design by william77</div>
+            <div style="margin-top: 16px;">
+            </div>
+        </div>
+    </div>
+    <div id="app">
+        <button id="play"
+            style="border-radius: 20px;margin-bottom:16px;border: 1px solid #FFF;border-bottom: 10px solid #FFF; color:#FFF; background-color: transparent;padding: 8px;margin-top: 8px; cursor: pointer; transform: scale(3);">click
+            2
+            play</button>
+    </div>
+    <div class="intro2" style="margin-left: 24px;font-size: 12px; ">bg-image downloads from <a
+            href="https://www.freepik.com/" target="_blank" style="color:white">www.freepik.com</div>
+
+    <script>
+        const body = document.body
+        const app = document.getElementById('app')
+        body.addEventListener('mousemove', e => {
+            app.style.transform = `perspective(400px) rotateX(${(50 + e.clientY + window.innerHeight / 2) / 25}deg) scale(.52)`
+        })
+    </script>
+</body>
+
+</html>
