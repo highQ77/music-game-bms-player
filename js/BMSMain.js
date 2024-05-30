@@ -40,13 +40,17 @@ new class BMSMain {
         let resourceURL = './cranky%20%5BEURO%20BEAT%5D%20J219/'
 
         // 產生遊戲歌曲相關資源 (J219.bms -> J219-bms-copy.txt, 因為 gitPage 會擋不明副檔名)
+        const app = document.getElementById('app')
         this.bms = await BMSLoader.loadBMS(resourceURL, 'J219-bms-copy.txt');
         this.bmpRC = await BMSLoader.loadImages((type, cur, total, filename) => {
             console.log(type, cur, '/', total, filename, 'loaded')
+            app.innerHTML = [type, cur, '/', total, filename, 'loaded'].join(' ')
         });
         this.wavRC = await BMSLoader.loadSounds((type, cur, total, filename) => {
             console.log(type, cur, '/', total, filename, 'loaded')
+            app.innerHTML = [type, cur, '/', total, filename, 'loaded'].join(' ')
         });
+        app.innerHTML = ''
         this.dataRC = JSON.parse(JSON.stringify(this.bms.data));
         this.barRC = this.generateBarsWithDuration(this.bms.data, 2000);
 

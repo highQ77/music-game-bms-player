@@ -11,11 +11,17 @@ export class BMSLoader {
 
     static loadBMS(remoteUrlBase, bmsFileName) {
         return new Promise(resolve => {
-            fetch(remoteUrlBase + bmsFileName).then(r => r.text()).then(r => {
-                this._remoteUrlBase = remoteUrlBase;
-                this._bms = (new BMSParser).parse(r);
-                resolve(this._bms);
-            });
+            var http = new XMLHttpRequest();
+            var url = remoteUrlBase + bmsFileName;
+            http.open('GET', url, true);
+            http.onreadystatechange = () => {
+                if (http.readyState == 4 && http.status == 200) {
+                    this._remoteUrlBase = remoteUrlBase;
+                    this._bms = (new BMSParser).parse(http.responseText);
+                    resolve(this._bms);
+                }
+            }
+            http.send();
         });
     }
 
