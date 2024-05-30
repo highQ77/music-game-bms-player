@@ -62,6 +62,7 @@ export class BMSLoader {
     static loadSound(obj, key, len, baseUrl, filename, progress) {
         return new Promise(resolve => {
             let audio = new Audio
+            audio.crossOrigin = "Anonymous";
             audio.onloadstart = () => {
                 obj[key] = audio;
                 function loaded() {
