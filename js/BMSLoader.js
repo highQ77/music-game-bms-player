@@ -67,19 +67,24 @@ export class BMSLoader {
 
     static loadSound(obj, key, len, baseUrl, filename, progress) {
         return new Promise(resolve => {
-            let audio = new Audio
-            audio.crossOrigin = "Anonymous";
-            audio.onloadstart = () => {
+            let audio = new Pizzicato.Sound(baseUrl + filename, function () {
                 obj[key] = audio;
-                function loaded() {
-                    audio.removeEventListener('canplaythrough', loaded)
-                    progress && progress('sound', ++obj.counter, len, filename);
-                    resolve(null)
-                }
-                audio.addEventListener('canplaythrough', loaded, false);
-            }
-            audio.src = baseUrl + filename
-            audio.load();
+                progress && progress('sound', ++obj.counter, len, filename);
+                resolve(null)
+            });
+            // let audio = new Audio
+            // audio.crossOrigin = "Anonymous";
+            // audio.onloadstart = () => {
+            //     obj[key] = audio;
+            //     function loaded() {
+            //         audio.removeEventListener('canplaythrough', loaded)
+            //         progress && progress('sound', ++obj.counter, len, filename);
+            //         resolve(null)
+            //     }
+            //     audio.addEventListener('canplaythrough', loaded, false);
+            // }
+            // audio.src = baseUrl + filename
+            // audio.load();
         })
     }
 }
