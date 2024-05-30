@@ -47,7 +47,6 @@ new class BMSMain {
         this.wavRC = await BMSLoader.loadSounds((type, cur, total, filename) => {
             console.log(type, cur, '/', total, filename, 'loaded')
         });
-        console.log(this.wavRC)
         this.dataRC = JSON.parse(JSON.stringify(this.bms.data));
         this.barRC = this.generateBarsWithDuration(this.bms.data, 2000);
 
