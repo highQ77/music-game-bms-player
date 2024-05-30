@@ -37,7 +37,7 @@ new class BMSMain {
         // [youtube J219] https://www.youtube.com/watch?v=jp4cjU8NLZQ&width=1280&height=720
         // [download J219] https://mega.co.nz/#!yQoBmYib!X5dXTxxRjJEmz4isPQ402xFAfvWZ3ttXdtR8T1twBpk
         // 請自行用 vscode live server 架 server 放音樂包測試 
-        let resourceURL = 'http://127.0.0.1:5500/cranky%20%5BEURO%20BEAT%5D%20J219/'
+        let resourceURL = './cranky%20%5BEURO%20BEAT%5D%20J219/'
 
         // 產生遊戲歌曲相關資源 (J219.bms -> J219-bms-copy.txt, 因為 gitPage 會擋不明副檔名)
         this.bms = await BMSLoader.loadBMS(resourceURL, 'J219-bms-copy.txt');
