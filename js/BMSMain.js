@@ -144,7 +144,7 @@ new class BMSMain {
                     node.style.transition = `top 2s linear`
                     this.displaySprite.append(node)
                     setTimeout(() => {
-                        node.style.top = window.innerHeight - 20 + 'px'
+                        node.style.top = 'calc(100vh - 20px)'
                         setTimeout(() => {
                             node.remove()
                             let lightBar = document.createElement('div')
