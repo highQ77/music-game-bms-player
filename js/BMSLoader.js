@@ -79,6 +79,7 @@ export class BMSLoader {
                 audio.addEventListener('canplaythrough', loaded, false);
             }
             audio.src = baseUrl + filename
+            audio.load();
         })
     }
 }
